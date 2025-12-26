@@ -21,5 +21,10 @@ namespace myproject
         {
             // ekhan theke shuru korbi
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
