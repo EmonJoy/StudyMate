@@ -32,5 +32,10 @@ namespace myproject
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            // touched by Emon
+        }
     }
 }
