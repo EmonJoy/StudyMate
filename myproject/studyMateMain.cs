@@ -62,6 +62,10 @@ namespace myproject
             {
                 AddMsg("I can help you with your studies or tools.", false);
             }
+            else if (text.Equals("is Asif Gay?", StringComparison.OrdinalIgnoreCase))
+            {
+                AddMsg("100% , He is Gay.", false);
+            }
             else
             {
                 AddMsg("Hmm... I’m thinking about that ", false);
