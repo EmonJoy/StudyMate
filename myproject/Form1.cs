@@ -37,5 +37,11 @@ namespace myproject
         {
             // touched by Emon
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            studyMateMain m = new studyMateMain();
+            m.Show();
+        }
     }
 }
