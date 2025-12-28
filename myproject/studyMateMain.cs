@@ -38,5 +38,51 @@ namespace myproject
         {
 
         }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+                return;
+
+            string text = textBox1.Text.Trim();
+
+         
+            AddMsg(text, true);
+            textBox1.Clear();
+
+            
+            await Task.Delay(1000); // 1 second
+
+     
+            if (text.Equals("hello", StringComparison.OrdinalIgnoreCase))
+            {
+                AddMsg("Hello! Nice to meet you 😊", false);
+            }
+            else if (text.Equals("help", StringComparison.OrdinalIgnoreCase))
+            {
+                AddMsg("I can help you with your studies or tools.", false);
+            }
+            else
+            {
+                AddMsg("Hmm... I’m thinking about that 🤔", false);
+            }
+        }
+
+        private void AddMsg(string text, bool is_me)
+        {
+            Label lbl = new Label();
+            lbl.AutoSize = true;
+            lbl.MaximumSize = new Size(250, 0);
+            lbl.Text = text;
+            lbl.Padding= new Padding(8);
+            lbl.Margin= new Padding(5);
+            if(is_me)
+            {
+                lbl.BackColor = Color.LightGreen;
+            }else { lbl.BackColor = Color.LightGray; }
+
+            flowLayoutPanel1.Controls.Add(lbl); 
+            flowLayoutPanel1.ScrollControlIntoView(lbl);
+        }
     }
 }
