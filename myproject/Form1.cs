@@ -41,7 +41,7 @@ namespace myproject
         private void button1_Click(object sender, EventArgs e)
         {
             //studyMateMain m = new studyMateMain();
-            //m.Show(); ** DO NOT TOUCH UNCOMMENT THIS ** 
+            //m.Show(); ** DO NOT  UNCOMMENT THIS ** 
         }
     }
 }
