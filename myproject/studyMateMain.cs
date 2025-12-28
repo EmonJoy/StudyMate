@@ -51,20 +51,20 @@ namespace myproject
             textBox1.Clear();
 
             
-            await Task.Delay(1000); // 1 second
+            await Task.Delay(1000); 
 
      
             if (text.Equals("hello", StringComparison.OrdinalIgnoreCase))
             {
-                AddMsg("Hello! Nice to meet you 😊", false);
+                AddMsg("Hello! I am Coco, Nice to meet you ;)", false);
             }
-            else if (text.Equals("help", StringComparison.OrdinalIgnoreCase))
+            else if (text.Equals("what can you do for me?", StringComparison.OrdinalIgnoreCase))
             {
                 AddMsg("I can help you with your studies or tools.", false);
             }
             else
             {
-                AddMsg("Hmm... I’m thinking about that 🤔", false);
+                AddMsg("Hmm... I’m thinking about that ", false);
             }
         }
 
