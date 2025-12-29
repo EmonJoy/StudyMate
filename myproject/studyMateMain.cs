@@ -88,9 +88,10 @@ namespace myproject
 
 
             if (text.Equals("hello", StringComparison.OrdinalIgnoreCase) ||
-                text.Equals("Helllo", StringComparison.OrdinalIgnoreCase)||
+                text.Equals("Hello", StringComparison.OrdinalIgnoreCase)||
                 text.Equals("Hi", StringComparison.OrdinalIgnoreCase)||
-                text.Equals("hi", StringComparison.OrdinalIgnoreCase))
+                text.Equals("hi", StringComparison.OrdinalIgnoreCase) ||
+                text.Equals("hey", StringComparison.OrdinalIgnoreCase))
             {
                 AddMsg("Hello! I am Coco, Nice to meet you ;)", false);
             }
@@ -145,5 +146,11 @@ namespace myproject
             pd.Show();
 
         }
+
+        private void studyMateMain_Load(object sender, EventArgs e)
+        {
+            
+        }
+
     }
 }
