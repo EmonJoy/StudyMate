@@ -93,6 +93,16 @@ namespace myproject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rsz_backimg {
+            get {
+                object obj = ResourceManager.GetObject("rsz_backimg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap studying_learn_study_pupil_education_knowledge_icon_230350 {
             get {
                 object obj = ResourceManager.GetObject("studying_learn_study_pupil_education_knowledge_icon_230350", resourceCulture);

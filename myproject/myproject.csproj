@@ -117,5 +117,8 @@
   <ItemGroup>
     <None Include="Resources\add_icon-icons.com_74429 %281%291.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_backimg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

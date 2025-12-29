@@ -144,6 +144,7 @@ namespace myproject
 
             pdWord pd = new pdWord();
             pd.Show();
+            this.Hide();
 
         }
 

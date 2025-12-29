@@ -95,5 +95,12 @@ namespace myproject
                 MessageBox.Show("Task Complete");
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            studyMateMain m = new studyMateMain();
+            m.ShowDialog();
+            this.Close();
+        }
     }
 }
