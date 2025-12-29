@@ -15,6 +15,7 @@ namespace myproject
         public studyMateMain()
         {
             InitializeComponent();
+            textBox1.KeyDown += enterToSend;
 
         }
 
@@ -34,13 +35,32 @@ namespace myproject
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e, KeyEventArgs ae)
         {
+
+        }
+
+
+
+        // enter Button 
+        private void enterToSend(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; button1.PerformClick();
+            }
+
 
         }
 
         private async void button1_Click(object sender, EventArgs e)
         {
+
+
+           
+
+
+
             if (string.IsNullOrWhiteSpace(textBox1.Text))
                 return;
 
@@ -51,10 +71,26 @@ namespace myproject
             textBox1.Clear();
 
             
-            await Task.Delay(1000); 
+            await Task.Delay(1000);
 
-     
-            if (text.Equals("hello", StringComparison.OrdinalIgnoreCase))
+
+            int num;
+            List<int> numbers = new List<int>();
+
+            if (int.TryParse(text, out num))
+            {
+                numbers.Add(num);
+                //AddMsg(numbers[0].ToString());
+                // EKhan theke shuru korte hbe
+                
+            }
+
+
+
+            if (text.Equals("hello", StringComparison.OrdinalIgnoreCase) ||
+                text.Equals("Helllo", StringComparison.OrdinalIgnoreCase)||
+                text.Equals("Hi", StringComparison.OrdinalIgnoreCase)||
+                text.Equals("hi", StringComparison.OrdinalIgnoreCase))
             {
                 AddMsg("Hello! I am Coco, Nice to meet you ;)", false);
             }
@@ -66,6 +102,7 @@ namespace myproject
             {
                 AddMsg("100% , He is Gay.", false);
             }
+
             else
             {
                 AddMsg("Hmm... I’m thinking about that ", false);
