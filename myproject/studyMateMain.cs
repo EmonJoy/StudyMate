@@ -125,5 +125,25 @@ namespace myproject
             flowLayoutPanel1.Controls.Add(lbl); 
             flowLayoutPanel1.ScrollControlIntoView(lbl);
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // pdf to word
+            // amra ekhane spire.PDF and spire.DOC use korbo to convert PDF
+
+            pdWord pd = new pdWord();
+            pd.Show();
+
+        }
     }
 }
