@@ -51,5 +51,17 @@ namespace myproject
             s.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //studyMateMain s = new studyMateMain();
+            //s.Show();
+            //this.Hide();
+            MessageBox.Show("This button is disabled by EmonJoy", 
+                "error",
+                MessageBoxButtons.OK ,
+                MessageBoxIcon.Warning
+                );
+        }
     }
 }
