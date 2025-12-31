@@ -40,8 +40,8 @@ namespace myproject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            studyMateMain m = new studyMateMain();
-            m.Show();
+            Login l = new Login();
+            l.Show();
             this.Hide(); // ** DO NOT  UNCOMMENT THIS ** 
         }
     }
