@@ -44,5 +44,12 @@ namespace myproject
             l.Show();
             this.Hide(); // ** DO NOT  UNCOMMENT THIS ** 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            signup s = new signup();
+            s.Show();
+            this.Hide();
+        }
     }
 }
