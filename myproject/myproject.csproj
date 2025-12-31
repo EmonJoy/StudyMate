@@ -103,6 +103,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="signup.resx">
+      <DependentUpon>signup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="studyMateMain.resx">
       <DependentUpon>studyMateMain.cs</DependentUpon>
     </EmbeddedResource>
