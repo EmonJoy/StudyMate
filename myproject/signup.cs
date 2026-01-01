@@ -152,5 +152,10 @@ namespace myproject
             }
             else { MessageBox.Show("Can not login"); }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -37,7 +37,7 @@ namespace myproject
         }
 
 
-        // 
+        
         string connectionString = "data source=DESKTOP-BF5OMUT\\SQLEXPRESS; database=KK; integrated security=SSPI";
         private void button1_Click(object sender, EventArgs e)
         {
