@@ -17,6 +17,9 @@ namespace myproject
         public pdWord()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen; // centered
+            this.WindowState = FormWindowState.Normal;           // not maximized
+            this.Size = new Size(1646, 1111);
         }
 
 

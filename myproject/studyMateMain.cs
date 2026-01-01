@@ -12,11 +12,19 @@ namespace myproject
 {
     public partial class studyMateMain : Form
     {
+        public studyMateMain(string user_name)
+        {
+
+            
+            InitializeComponent();
+            textBox1.KeyDown += enterToSend;
+            label5.Text = user_name;
+
+        }
         public studyMateMain()
         {
             InitializeComponent();
             textBox1.KeyDown += enterToSend;
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -160,6 +168,11 @@ namespace myproject
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }
