@@ -20,8 +20,8 @@ namespace myproject
         {
             InitializeComponent();
 
+            this.StartPosition = FormStartPosition.CenterScreen;
 
-            
 
         }
 
@@ -33,6 +33,7 @@ namespace myproject
         private void signup_Load(object sender, EventArgs e)
         {
             button1.Enabled = false;
+            button1.BackColor = Color.White;
         }
 
         // exit korar jonno
@@ -60,6 +61,7 @@ namespace myproject
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             button1.Enabled = checkBox1.Checked;
+            button1.BackColor = Color.LightSkyBlue;
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
