@@ -57,10 +57,10 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::myproject.Properties.Resources.rsz_backimg;
-            this.pictureBox1.Location = new System.Drawing.Point(108, 51);
+            this.pictureBox1.Image = global::myproject.Properties.Resources.rsz_1left_arrow_10117817;
+            this.pictureBox1.Location = new System.Drawing.Point(69, 49);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(132, 59);
+            this.pictureBox1.Size = new System.Drawing.Size(132, 71);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -94,7 +94,7 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.listView1);
             this.panel2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(369, 318);
+            this.panel2.Location = new System.Drawing.Point(348, 245);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(937, 593);
             this.panel2.TabIndex = 3;
@@ -133,7 +133,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::myproject.Properties.Resources.add_icon_icons1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(2525, 945);
+            this.ClientSize = new System.Drawing.Size(2525, 991);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;

@@ -138,5 +138,8 @@
   <ItemGroup>
     <None Include="Resources\rsz_backimg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_1left-arrow_10117817.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -54,13 +54,12 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.StudyMate);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(-8, 3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1783, 111);
+            this.panel1.Size = new System.Drawing.Size(1646, 111);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -71,7 +70,7 @@
             this.StudyMate.Font = new System.Drawing.Font("Mongolian Baiti", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudyMate.Location = new System.Drawing.Point(671, 24);
             this.StudyMate.Name = "StudyMate";
-            this.StudyMate.Size = new System.Drawing.Size(196, 64);
+            this.StudyMate.Size = new System.Drawing.Size(175, 64);
             this.StudyMate.TabIndex = 1;
             this.StudyMate.Text = "StudyMate";
             this.StudyMate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,10 +93,11 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Location = new System.Drawing.Point(133, 240);
+            this.panel2.Location = new System.Drawing.Point(12, 117);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(665, 515);
+            this.panel2.Size = new System.Drawing.Size(1149, 620);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label1
             // 
@@ -106,7 +106,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(128, 28);
+            this.label1.Location = new System.Drawing.Point(357, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(376, 30);
             this.label1.TabIndex = 1;
@@ -124,21 +124,20 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(533, 308);
+            this.dataGridView1.Size = new System.Drawing.Size(1017, 413);
             this.dataGridView1.TabIndex = 0;
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.flowLayoutPanel1);
-            this.panel3.Location = new System.Drawing.Point(1146, 149);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(1167, 111);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(440, 606);
+            this.panel3.Size = new System.Drawing.Size(479, 848);
             this.panel3.TabIndex = 2;
             // 
             // button1
@@ -146,7 +145,7 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button1.BackColor = System.Drawing.Color.RosyBrown;
             this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(355, 527);
+            this.button1.Location = new System.Drawing.Point(374, 769);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 79);
             this.button1.TabIndex = 3;
@@ -159,7 +158,7 @@
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(-8, 527);
+            this.textBox1.Location = new System.Drawing.Point(11, 769);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(367, 76);
@@ -184,25 +183,25 @@
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(-16, 91);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(23, 91);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(453, 436);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(456, 630);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
             // 
             // panel4
             // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.BackColor = System.Drawing.Color.Snow;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.linkLabel3);
             this.panel4.Controls.Add(this.linkLabel2);
             this.panel4.Controls.Add(this.linkLabel1);
             this.panel4.Controls.Add(this.label3);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(133, 812);
+            this.panel4.Location = new System.Drawing.Point(0, 743);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(649, 266);
+            this.panel4.Size = new System.Drawing.Size(1167, 216);
             this.panel4.TabIndex = 3;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -258,7 +257,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(1763, 1115);
+            this.ClientSize = new System.Drawing.Size(1646, 959);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
