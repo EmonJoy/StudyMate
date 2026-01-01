@@ -13,9 +13,16 @@ namespace myproject
 {
     public partial class signup : Form
     {
+
+        
+
         public signup()
         {
             InitializeComponent();
+
+
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -25,7 +32,7 @@ namespace myproject
 
         private void signup_Load(object sender, EventArgs e)
         {
-            
+            button1.Enabled = false;
         }
 
         // exit korar jonno
@@ -52,7 +59,7 @@ namespace myproject
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
+            button1.Enabled = checkBox1.Checked;
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -74,6 +81,10 @@ namespace myproject
             this.Hide();
         }
 
+
+
+
+        
         
 
 
@@ -82,6 +93,10 @@ namespace myproject
         string connectionString = "data source=DESKTOP-BF5OMUT\\SQLEXPRESS; database=KK; integrated security=SSPI";
         private void button1_Click(object sender, EventArgs e)
         {
+
+            
+            
+
             string email = textBox1.Text;
             string user_name = textBox2.Text;
             string password = textBox3.Text;
@@ -117,7 +132,7 @@ namespace myproject
                         if (result != null)
                         {
                             int newUserId = Convert.ToInt32(result);
-                            MessageBox.Show("Sign UP successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show($"Sign UP successfully!\nyour user id is: {newUserId}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Form1 f = new Form1();
                             f.ShowDialog();
                             this.Hide();
