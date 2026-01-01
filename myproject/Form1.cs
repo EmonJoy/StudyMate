@@ -52,16 +52,24 @@ namespace myproject
             this.Hide();
         }
 
+        // exit korar jonno
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            Application.Exit();
+            base.OnFormClosed(e);
+        }
+
+
         private void button3_Click(object sender, EventArgs e)
         {
-            //studyMateMain s = new studyMateMain();
-            //s.Show();
-            //this.Hide();
-            MessageBox.Show("This button is disabled by EmonJoy", 
-                "error",
-                MessageBoxButtons.OK ,
-                MessageBoxIcon.Warning
-                );
+            studyMateMain s = new studyMateMain();
+            s.Show();
+            ////this.Hide();
+            //MessageBox.Show("This button is disabled by EmonJoy", 
+            //    "error",
+            //    MessageBoxButtons.OK ,
+            //    MessageBoxIcon.Warning
+            //    );
         }
     }
 }

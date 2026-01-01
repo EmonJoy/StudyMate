@@ -137,6 +137,12 @@ namespace myproject
 
         }
 
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            Application.Exit();
+            base.OnFormClosed(e);
+        }
+
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // pdf to word

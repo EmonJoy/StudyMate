@@ -21,5 +21,17 @@ namespace myproject
         {
 
         }
+
+        // form properly exit korar jnne ** DO NOT TOUCHED the func ** 
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            Application.Exit();
+            base.OnFormClosed(e);
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

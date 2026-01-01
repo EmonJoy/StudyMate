@@ -26,6 +26,11 @@ namespace myproject
         {
             
         }
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            Application.Exit();
+            base.OnFormClosed(e);
+        }
 
         private void label4_Click(object sender, EventArgs e)
         {
