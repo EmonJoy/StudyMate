@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,14 +13,17 @@ namespace myproject
 {
     public partial class studyMateMain : Form
     {
-        public studyMateMain(string user_name)
+        int id;
+        public studyMateMain(string user_name, int userID)
         {
 
             
             InitializeComponent();
             textBox1.KeyDown += enterToSend;
             label5.Text = user_name;
+             id = userID;
 
+            LoadUserTasks();
         }
         public studyMateMain()
         {
@@ -176,5 +180,49 @@ namespace myproject
         {
 
         }
+
+        string connectionString = "data source=DESKTOP-BF5OMUT\\SQLEXPRESS; database=KK; " +
+                                    "integrated security=SSPI";
+        private void LoadUserTasks()
+        {
+            string query = "SELECT TaskName FROM Tasks WHERE userId = @id";
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                cmd.Parameters.AddWithValue("@id", id);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+                dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+                dataGridView1.DataSource = dt; 
+            }
+        }
+
+
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //// শুধু সেই user-এর taskName select করবে
+            //string query = "SELECT TaskName FROM Tasks WHERE userId = @id";
+
+            //using (SqlConnection con = new SqlConnection(connectionString))
+            //using (SqlCommand cmd = new SqlCommand(query, con))
+            //{
+            //    cmd.Parameters.AddWithValue("@id", id); // constructor-এ catch করা userId
+
+            //    SqlDataAdapter da = new SqlDataAdapter(cmd);
+            //    DataTable dt = new DataTable();
+            //    da.Fill(dt);
+
+            //    dataGridView1.DataSource = dt; // DataGridView-এ দেখাবে
+            //}
+        }
+
     }
 }

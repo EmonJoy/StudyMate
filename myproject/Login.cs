@@ -38,7 +38,10 @@ namespace myproject
 
 
         
-        string connectionString = "data source=DESKTOP-BF5OMUT\\SQLEXPRESS; database=KK; integrated security=SSPI";
+        string connectionString = "data source=DESKTOP-BF5OMUT\\SQLEXPRESS; database=KK; " +
+            "integrated security=SSPI";
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             string email_forLogin = textBox1.Text;
@@ -61,10 +64,11 @@ namespace myproject
                     if (reader.Read())
                     {
                         int userId = (int)reader["Id"];
+                     
                         string user_forCheck = reader["userName"].ToString();
 
 
-                        studyMateMain m = new studyMateMain(user_forCheck);
+                        studyMateMain m = new studyMateMain(user_forCheck, userId);
                         m.Show();
                         this.Hide();
                         
