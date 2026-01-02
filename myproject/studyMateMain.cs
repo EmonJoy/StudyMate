@@ -196,9 +196,9 @@ namespace myproject
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                dataGridView1.DataSource = dt; // ✅ DataGridView-এ assign করা লাগছে
+                dataGridView1.DataSource = dt; 
 
-                // Styling
+                
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
                 dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -206,7 +206,7 @@ namespace myproject
                 dataGridView1.RowTemplate.Height = 30;
                 dataGridView1.RowTemplate.DefaultCellStyle.Padding = new Padding(5);
 
-                // Hidden করতে চাইলে এখন Task_NO hide করতে হবে, Id নয়
+                
                 dataGridView1.Columns["id"].Visible = false;
             }
         }
@@ -258,15 +258,15 @@ namespace myproject
 
             if (dr == DialogResult.Yes)
             {
-                // Selected row catch করা
+                
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
-                int taskId = Convert.ToInt32(selectedRow.Cells["Id"].Value); // DB এর primary key ধরে নাও
+                int taskId = Convert.ToInt32(selectedRow.Cells["Id"].Value); 
 
-                // DB থেকে delete
+                
                 DeleteTaskFromDB(taskId);
 
-                // Grid থেকে remove
+           
                 dataGridView1.Rows.Remove(selectedRow);
             }
         }
