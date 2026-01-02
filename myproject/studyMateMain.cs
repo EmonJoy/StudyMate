@@ -92,8 +92,7 @@ namespace myproject
             if (int.TryParse(text, out num))
             {
                 numbers.Add(num);
-                //AddMsg(numbers[0].ToString());
-                // EKhan theke shuru korte hbe
+
                 
             }
 
@@ -183,7 +182,7 @@ namespace myproject
 
         string connectionString = "data source=DESKTOP-BF5OMUT\\SQLEXPRESS; database=KK; " +
                                     "integrated security=SSPI";
-        private void LoadUserTasks()
+        public void LoadUserTasks()
         {
             string query = "SELECT id , TaskName FROM Tasks WHERE userId = @id";
 
@@ -269,6 +268,12 @@ namespace myproject
            
                 dataGridView1.Rows.Remove(selectedRow);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            addTask t = new addTask(id, this);
+            t.ShowDialog();
         }
     }
 }
