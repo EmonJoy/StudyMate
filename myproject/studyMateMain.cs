@@ -202,7 +202,7 @@ namespace myproject
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
                 dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-                dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 12);
+                
                 dataGridView1.RowTemplate.Height = 30;
                 dataGridView1.RowTemplate.DefaultCellStyle.Padding = new Padding(5);
 
