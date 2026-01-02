@@ -185,7 +185,7 @@ namespace myproject
                                     "integrated security=SSPI";
         private void LoadUserTasks()
         {
-            string query = "SELECT TaskName FROM Tasks WHERE userId = @id";
+            string query = "SELECT id , TaskName FROM Tasks WHERE userId = @id";
 
             using (SqlConnection con = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand(query, con))
@@ -196,33 +196,79 @@ namespace myproject
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
+                dataGridView1.DataSource = dt; // ✅ DataGridView-এ assign করা লাগছে
+
+                // Styling
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
                 dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 12);
+                dataGridView1.RowTemplate.Height = 30;
+                dataGridView1.RowTemplate.DefaultCellStyle.Padding = new Padding(5);
 
-                dataGridView1.DataSource = dt; 
+                // Hidden করতে চাইলে এখন Task_NO hide করতে হবে, Id নয়
+                dataGridView1.Columns["id"].Visible = false;
             }
         }
 
 
 
+
+
+
+
+
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //// শুধু সেই user-এর taskName select করবে
-            //string query = "SELECT TaskName FROM Tasks WHERE userId = @id";
+       
 
-            //using (SqlConnection con = new SqlConnection(connectionString))
-            //using (SqlCommand cmd = new SqlCommand(query, con))
-            //{
-            //    cmd.Parameters.AddWithValue("@id", id); // constructor-এ catch করা userId
-
-            //    SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //    DataTable dt = new DataTable();
-            //    da.Fill(dt);
-
-            //    dataGridView1.DataSource = dt; // DataGridView-এ দেখাবে
-            //}
         }
 
+
+
+        private void DeleteTaskFromDB(int taskId)
+        {
+            string query = "DELETE FROM Tasks WHERE Id = @taskId";
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                cmd.Parameters.AddWithValue("@taskId", taskId);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a task to delete.");
+                return;
+            }
+
+            DialogResult dr = MessageBox.Show(
+                "Are you sure you want to delete the selected task?",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (dr == DialogResult.Yes)
+            {
+                // Selected row catch করা
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                int taskId = Convert.ToInt32(selectedRow.Cells["Id"].Value); // DB এর primary key ধরে নাও
+
+                // DB থেকে delete
+                DeleteTaskFromDB(taskId);
+
+                // Grid থেকে remove
+                dataGridView1.Rows.Remove(selectedRow);
+            }
+        }
     }
 }
