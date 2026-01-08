@@ -1,33 +1,41 @@
 # StudyMate
 
-**StudyMate** is a productivity app designed to help students organize their assignments, get quick AI assistance, and use handy file tools—all in one place.  
+**StudyMate** is a productivity app for students that combines assignment management, AI assistance, and useful file tools—all in one place.  
 
 ---
 
 ## Features
 
-### 1. Assignment Tracker
-- **Add assignments** with deadlines and details.
+### 1. User Authentication
+- **Login & Signup** directly connected to **Microsoft SQL Server**.
+- Two tables used:
+  - `users` – stores user credentials and profile info.
+  - `tasks` – stores user assignments and related details.
+
+### 2. Assignment Tracker
+- **Add assignments** with deadlines and descriptions.
 - **Delete assignments** when completed.
-- **View assignments** in a simple ListView for quick overview.
+- **View assignments** in a simple **ListView**.
 
-### 2. AI Chatbot Assistant
-- Get help with study queries.
-- Receive suggestions or guidance for tasks.
-- Acts as a personal study companion.
+### 3. AI Chatbot Assistant
+- Ask study-related questions.
+- Get suggestions and guidance for tasks.
+- Acts as a smart study companion.
 
-### 3. Tools
-- **Word to PDF** conversion.
-- **PDF to Word** conversion.
+### 4. Tools
+- **Word → PDF** conversion.
+- **PDF → Word** conversion.
 - **Merge PDFs** into a single file.
-- **Zip Archiver** to compress multiple files for easy sharing.
+- **Zip Archiver** to compress files for easy sharing.
 
 ---
 
 ## Screenshots
-*(COming soom xD )*
+*(Coming soon xD )*
 
 ---
+
+
 
 ## Installation
 1. Clone the repository:
