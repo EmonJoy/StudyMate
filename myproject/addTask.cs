@@ -16,21 +16,16 @@ namespace myproject
     public partial class addTask : Form
     {
 
-        int id;
-        public addTask()
-        {
-            InitializeComponent();
-        }
-
-   
         studyMateMain mainForm;
+        int id;
 
-        public addTask(int id, studyMateMain form)
+        public addTask(int id, studyMateMain mainForm)
         {
             InitializeComponent();
             this.id = id;
-            this.mainForm = form;
+            this.mainForm = mainForm;
         }
+
 
 
         string connectionString = "data source=DESKTOP-BF5OMUT\\SQLEXPRESS; database=KK; " +

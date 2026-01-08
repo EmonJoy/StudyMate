@@ -22,6 +22,21 @@ namespace myproject
             this.Size = new Size(1646, 1111);
         }
 
+        int id;
+        string user_name;
+        public pdWord(string user_name,int id)
+        {
+            InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen; 
+            this.WindowState = FormWindowState.Normal;           
+            this.Size = new Size(1646, 1111);
+            this.id = id;
+            this.user_name = user_name;
+            label2.Text = user_name;
+
+        }
+
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -106,9 +121,14 @@ namespace myproject
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            studyMateMain m = new studyMateMain();
+            studyMateMain m = new studyMateMain(user_name, id);
             m.ShowDialog();
             
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

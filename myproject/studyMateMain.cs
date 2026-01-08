@@ -14,14 +14,17 @@ namespace myproject
     public partial class studyMateMain : Form
     {
         int id;
+        string user_name;
         public studyMateMain(string user_name, int userID)
         {
 
             
             InitializeComponent();
             textBox1.KeyDown += enterToSend;
+            this.user_name = user_name;
             label5.Text = user_name;
              id = userID;
+            
 
             LoadUserTasks();
         }
@@ -159,7 +162,7 @@ namespace myproject
             // pdf to word
             // amra ekhane spire.PDF and spire.DOC use korbo to convert PDF
 
-            pdWord pd = new pdWord();
+            pdWord pd = new pdWord(user_name, id);
             pd.Show();
             this.Hide();
 
