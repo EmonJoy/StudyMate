@@ -278,5 +278,12 @@ namespace myproject
             addTask t = new addTask(id, this);
             t.ShowDialog();
         }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            mergePdf m = new mergePdf();
+            m.Show();
+            this.Hide();
+        }
     }
 }
