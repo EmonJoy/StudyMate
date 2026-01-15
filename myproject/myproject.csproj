@@ -95,6 +95,12 @@
     <Compile Include="studyMateMain.Designer.cs">
       <DependentUpon>studyMateMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="wordToPdf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wordToPdf.Designer.cs">
+      <DependentUpon>wordToPdf.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="addTask.resx">
       <DependentUpon>addTask.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="studyMateMain.resx">
       <DependentUpon>studyMateMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wordToPdf.resx">
+      <DependentUpon>wordToPdf.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

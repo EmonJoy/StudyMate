@@ -130,5 +130,17 @@ namespace myproject
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            wordToPdf w = new wordToPdf();
+            this.Hide();
+            w.Show();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
