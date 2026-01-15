@@ -114,19 +114,17 @@
             this.panel2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(348, 245);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(965, 649);
+            this.panel2.Size = new System.Drawing.Size(965, 514);
             this.panel2.TabIndex = 3;
             // 
             // button2
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.BackColor = System.Drawing.Color.GreenYellow;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(381, 419);
+            this.button2.Location = new System.Drawing.Point(381, 356);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(324, 114);
+            this.button2.Size = new System.Drawing.Size(256, 106);
             this.button2.TabIndex = 4;
             this.button2.Text = "Convert";
             this.button2.UseVisualStyleBackColor = false;
@@ -137,9 +135,9 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(73, 419);
+            this.button1.Location = new System.Drawing.Point(136, 352);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(288, 114);
+            this.button1.Size = new System.Drawing.Size(225, 114);
             this.button1.TabIndex = 3;
             this.button1.Text = "Add PDF";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -163,7 +161,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::myproject.Properties.Resources.add_icon_icons1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1788, 1126);
+            this.ClientSize = new System.Drawing.Size(1788, 1010);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
