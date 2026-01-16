@@ -59,7 +59,7 @@ namespace myproject
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "Word Files (*.doc;*.docx)|*.doc;*.docx";
@@ -131,12 +131,12 @@ namespace myproject
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            button1_Click(sender, e);
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-
+            button2_Click(sender, e);
         }
     }
 }

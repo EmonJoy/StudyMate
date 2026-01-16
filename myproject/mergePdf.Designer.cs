@@ -103,16 +103,17 @@
             // 
             this.button1.AllowDrop = true;
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(395, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(270, 235);
+            this.button1.Size = new System.Drawing.Size(226, 199);
             this.button1.TabIndex = 8;
-            this.button1.Text = "Add WordFile";
+            this.button1.Text = "select or \r\nDrag files here";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
