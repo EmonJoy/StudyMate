@@ -133,9 +133,10 @@ namespace myproject
                         {
                             int newUserId = Convert.ToInt32(result);
                             MessageBox.Show($"Sign UP successfully!\nyour user id is: {newUserId}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Form1 f = new Form1();
-                            f.ShowDialog();
+                            Login f = new Login();
                             this.Hide();
+                            f.ShowDialog();
+                            
                         }
                         else
                         {
@@ -148,7 +149,7 @@ namespace myproject
 
 
 
-                MessageBox.Show("Successfull");
+                //MessageBox.Show("Successfull");
             }
             else { MessageBox.Show("Can not login"); }
         }

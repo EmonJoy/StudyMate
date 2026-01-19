@@ -89,17 +89,6 @@ namespace myproject
             await Task.Delay(1000);
 
 
-            int num;
-            List<int> numbers = new List<int>();
-
-            if (int.TryParse(text, out num))
-            {
-                numbers.Add(num);
-
-                
-            }
-
-
 
             if (text.Equals("hello", StringComparison.OrdinalIgnoreCase) ||
                 text.Equals("Hello", StringComparison.OrdinalIgnoreCase)||
@@ -113,6 +102,12 @@ namespace myproject
             {
                 AddMsg("I can help you with your studies or tools.", false);
             }
+            else if (text.Equals("/help", StringComparison.OrdinalIgnoreCase))
+            {
+                AddMsg("I can help you with your studies or tools.", false);
+            }
+
+
             else if (text.Equals("is Asif Gay?", StringComparison.OrdinalIgnoreCase))
             {
                 AddMsg("100% , He is Gay.", false);
@@ -309,6 +304,11 @@ namespace myproject
                 this.Hide();
             }
             
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
