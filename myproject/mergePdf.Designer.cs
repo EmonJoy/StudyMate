@@ -70,9 +70,10 @@
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(221, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(327, 30);
+            this.label1.Size = new System.Drawing.Size(303, 30);
             this.label1.TabIndex = 0;
-            this.label1.Text = "StudyMate - word to PDF";
+            this.label1.Text = "StudyMate - MergePDF";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // flowLayoutPanel1
             // 
