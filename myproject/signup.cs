@@ -66,7 +66,8 @@ namespace myproject
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Something need to show");
+            MessageBox.Show(" studyMate is made for all kind of student help and not for unusual contexts. Student must use the proper email id and a legit password so that one will not forget.And a secured zipped option is implimented so that one can keep his notes secured and must use winrar to unzip to open ones secured zipped file." +
+                " ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button2_Click(object sender, EventArgs e)
