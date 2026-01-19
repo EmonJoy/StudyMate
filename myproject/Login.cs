@@ -81,5 +81,12 @@ namespace myproject
             }
 
         }
+
+        private void SignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            signup signup = new signup();
+            signup.Show();
+            this.Hide();
+        }
     }
 }

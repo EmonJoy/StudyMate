@@ -57,7 +57,7 @@ namespace myproject
 
 
 
-        // enter Button 
+   
         private void enterToSend(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -283,7 +283,32 @@ namespace myproject
         {
             mergePdf m = new mergePdf();
             m.Show();
-            this.Hide();
+            
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            zipBooster b= new zipBooster();
+            b.Show();
+            
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Are you sure? you want to logout",
+                "Confirmation",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+               Login l = new Login();
+                l.Show();
+                this.Hide();
+            }
+            
         }
     }
 }

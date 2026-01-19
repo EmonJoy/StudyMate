@@ -133,12 +133,17 @@ namespace myproject
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            wordToPdf w = new wordToPdf();
+            wordToPdf w = new wordToPdf(user_name,  id);
             this.Hide();
             w.Show();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

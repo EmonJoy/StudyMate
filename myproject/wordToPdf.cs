@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iText.Commons.Actions.Sequence;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,16 @@ namespace myproject
 {
     public partial class wordToPdf : Form
     {
-        public wordToPdf()
+        string user;
+        int id;
+        public wordToPdf(string user, int id)
         {
             InitializeComponent();
+            this.user = user;
+            this.id = id;
+            label3.Text = user;
         }
+        
 
         protected override void OnFormClosed(FormClosedEventArgs e)
         {
@@ -119,7 +126,7 @@ namespace myproject
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            pdWord p = new pdWord();
+            pdWord p = new pdWord(user, id);
             p.Show();
             this.Hide();
         }
@@ -137,6 +144,11 @@ namespace myproject
         private void button2_Click_1(object sender, EventArgs e)
         {
             button2_Click(sender, e);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
