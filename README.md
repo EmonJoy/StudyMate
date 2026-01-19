@@ -31,7 +31,9 @@
 ---
 
 ## Screenshots
-*(Coming soon xD )*
+<img width="2560" height="1600" alt="Screenshot (58)" src="https://github.com/user-attachments/assets/b33fd051-e87e-43f1-9a3f-5c7c452a6814" />
+
+
 
 ---
 
